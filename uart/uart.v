@@ -50,7 +50,7 @@ always @(posedge clk or negedge rst_n)begin
         if(end_cnt0)
             cnt0 <= 0;
         else
-            cnt0 <= cnt + 1;
+            cnt0 <= cnt0 + 1;
     end
 end
 
@@ -65,7 +65,7 @@ always @(posedge clk or negedge rst_n)begin
     if(!rst_n)begin
         cnt1 <= 0;
     end
-    else if(add_cnt)begin
+    else if(add_cnt1)begin
         if(end_cnt1)
             cnt1 <= 0;
         else
@@ -99,7 +99,7 @@ assign pos_edge = trigger ==1 && tri_ff0==0 ;
 
 //异步时钟同化，通过打两拍的方式实现信号的同步化
 //通过打一拍的方式实现边沿检测，
-always @(poedge clk or negedge rst_n) begin 
+always @(posedge clk or negedge rst_n) begin 
     if(rst_n ==1'b0) begin 
         rx_uart_ff0 <= 1 ;
         rx_uart_ff1 <= 1 ;
@@ -107,7 +107,7 @@ always @(poedge clk or negedge rst_n) begin
     end
     else begin 
         rx_uart_ff0 <= rx_uart     ;
-        rx_uart_ff1 <= rx_uart_ffo ;
+        rx_uart_ff1 <= rx_uart_ff0 ;
         rx_uart_ff2 <= rx_uart_ff1 ;
     end
 end
@@ -130,19 +130,19 @@ always @(posedge clk or negedge rst_n) begin
          led <= 8'hff ;
      end
      else if(add_cnt0 && cnt0 ==5208/2-1)begin
-          if(cnt1=1)
+          if(cnt1==1)
               led[0] <= rx_uart_ff1 ; 
-          else if(cnt1=2)
+          else if(cnt1==2)
               led[1] <= rx_uart_ff1 ;
-          else if(cnt1=3)
+          else if(cnt1==3)
               led[2] <= rx_uart_ff1 ;
-          else if(cnt1=4)
+          else if(cnt1==4)
               led[3] <= rx_uart_ff1 ;
-          else if(cnt1=5)
+          else if(cnt1==5)
               led[4] <= rx_uart_ff1 ;
-          else if(cnt1=6)
+          else if(cnt1==6)
               led[5] <= rx_uart_ff1 ;
-          else if(cnt1=7)
+          else if(cnt1==7)
               led[6] <= rx_uart_ff1 ;
           else
               led[7] <= rx_uart_ff1 ;
