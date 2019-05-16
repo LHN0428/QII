@@ -1,9 +1,3 @@
-
-
-
-
-
-
 module color_execl(
 
    input  clk ,
@@ -15,12 +9,14 @@ module color_execl(
 );
 
 
+wire  clk_0;
+
 
 //PLL模块例化
 
 vga_pll		module_1(
-     .inclk0 ( clk ),
-     .c0(ck_0) 
+     .inclk0 (clk ),
+     .c0(clk_0) 
 
 	);
 
@@ -29,7 +25,7 @@ vga_pll		module_1(
 color  module6(
 	
 		.rst(rst_n) ,
-		.clk(clk) ,
+		.clk(clk_0) ,
 		.hys(lcd_hs) ,
 		.vys(lcd_ys) ,
 		.lcd_rgb(lcd_rgb)
