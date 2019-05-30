@@ -97,7 +97,7 @@
   * Project12-DDS_da
   * Date: 2019-5-30
   * 基于ROM的DAC输出，也可以调用DDS IP核
-  * 具体描述查看DDS_da时钟文件夹中的readme.md文件
+  * 具体描述查看DDS_da文件夹中的readme.md文件
   *   此部分详细设计可以参考新浪博客:http://blog.sina.com.cn/s/blog_192915ff40102xy12.html
   *
  
@@ -105,7 +105,7 @@
    * Project13-fir滤波器
   * Date: 2019-5-30
   * 通过使用matlab调整滤波器系数，抽头个数，实现低通，高通，带通滤波器设计
-  * 具体描述查看fir滤波器时钟文件夹中的readme.md文件
+  * 具体描述查看fir滤波器文件夹中的readme.md文件
   *   此部分详细设计可以参考新浪博客:http://blog.sina.com.cn/s/blog_192915ff40102xy1f.html
   *
  
@@ -113,7 +113,7 @@
    * Project15-插值滤波器
   * Date: 2019-5-30
   * 实现采样率转换
-  * 具体描述查看fir滤波器时钟文件夹中的readme.md文件
+  * 具体描述查看cic文件夹中的readme.md文件
   *   此部分详细设计可以参考新浪博客:http://blog.sina.com.cn/s/blog_192915ff40102xy1l.html
   *
  
