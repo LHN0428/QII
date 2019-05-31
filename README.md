@@ -121,7 +121,7 @@
   * Project16-ADC
   * Date: 2019-5-30
   * AD9709进行DA输出，然后再进行AD采集
-  * 具体描述查看fir滤波器时钟文件夹中的readme.md文件
+  * 具体描述查看ad_prj文件夹中的readme.md文件
   *   此部分详细设计可以参考新浪博客:http://blog.sina.com.cn/s/blog_192915ff40102xy1q.html
   *
  
